@@ -37,7 +37,7 @@ public class BonusServiceTest {
     }
 
     @Test
-    void testForBoundaryBonusLimit() {
+    void shouldReturnMaxBonusForRegistered() {
         BonusService service = new BonusService();
 
         long amount = 112_000;

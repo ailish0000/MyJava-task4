@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 public class BonusServiceTest {
 
     @Test
-    void test1() {
+    void shouldCalculateForRegisteredAndUnderLimit() {
         BonusService service = new BonusService();
 
         long amount = 1000;
@@ -15,7 +15,7 @@ public class BonusServiceTest {
     }
 
     @Test
-    void test2() {
+    void shouldCalculateForRegisteredAndOverLimit() {
         BonusService service = new BonusService();
 
         long amount = 1_000_000;
@@ -26,7 +26,7 @@ public class BonusServiceTest {
     }
 
     @Test
-    void test3() {
+    void testForUnregisteredUserWithSmallAmount() {
         BonusService service = new BonusService();
 
         long amount = 1000;
@@ -37,7 +37,7 @@ public class BonusServiceTest {
     }
 
     @Test
-    void test4() {
+    void testForBoundaryBonusLimit() {
         BonusService service = new BonusService();
 
         long amount = 112_000;
